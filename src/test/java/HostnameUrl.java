@@ -1,8 +1,8 @@
-public class Jsonplaceholder extends HostnameTest{
+public class HostnameUrl extends HostnameBasic {
 
     private static final String HOSTNAME = "https://jsonplaceholder.typicode.com";
 
-    public Jsonplaceholder()
+    public HostnameUrl()
     {
         super(HOSTNAME);
     }

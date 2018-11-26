@@ -3,7 +3,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.notNullValue;
 
-public class Zad_1_Test extends Jsonplaceholder {
+public class Zad_1_Test extends HostnameUrl {
 
     @Test
     public void checkIfUserCanBrowsePost() {

@@ -1,8 +1,8 @@
-public class HostnameTest {
+public class HostnameBasic {
 
     protected final String hostname;
 
-    HostnameTest(String hostname)
+    HostnameBasic(String hostname)
     {
         this.hostname = hostname;
     }

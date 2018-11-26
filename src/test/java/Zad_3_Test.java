@@ -7,7 +7,7 @@ import java.util.Map;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class Zad_3_Test extends Jsonplaceholder {
+public class Zad_3_Test extends HostnameUrl {
 
     @Test
     public void checkIfUserCanCreatePost() {
