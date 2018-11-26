@@ -23,7 +23,7 @@ public class Zad_2_Test extends Jsonplaceholder{
                 .statusCode(HttpStatus.SC_OK)
                 .and()
                 .body(
-                        "findAll {it.postId = 1}.size()", equalTo(5)
+                        "findAll {it.postId == 1}.size()", equalTo(5)
 
                 )
                 .log().all();

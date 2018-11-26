@@ -4,10 +4,10 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class Zad_5_Test extends Jsonplaceholder {
+public class Zad_6_Test extends Jsonplaceholder {
 
     @Test
-    public void checkResponseForContentEncoding() {
+    public void checkNumberOfPosts() {
 
 
 
@@ -21,7 +21,7 @@ public class Zad_5_Test extends Jsonplaceholder {
                 .then()
                 .statusCode(HttpStatus.SC_OK)
                 .and()
-                .header("Content-Encoding", equalTo("gzip"))
+                .body("findAll {it.id}.size()", equalTo(100))
                 .log().all();
     }
 }

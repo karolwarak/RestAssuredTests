@@ -4,10 +4,10 @@ import org.junit.Test;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.CoreMatchers.equalTo;
 
-public class Zad_5_Test extends Jsonplaceholder {
+public class Zad_7_Test extends Jsonplaceholder {
 
     @Test
-    public void checkResponseForContentEncoding() {
+    public void verifyUserWithSpecificZipCode() {
 
 
 
@@ -16,12 +16,12 @@ public class Zad_5_Test extends Jsonplaceholder {
                 //.header("contentType", "application/json")
 
                 .when()
-                .get(path("/posts"))
+                .get(path("/users"))
 
                 .then()
                 .statusCode(HttpStatus.SC_OK)
                 .and()
-                .header("Content-Encoding", equalTo("gzip"))
+                .body("address.findAll {it.zipcode == '23505-1337'}.size()", equalTo(1))
                 .log().all();
     }
 }
